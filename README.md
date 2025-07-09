@@ -39,7 +39,6 @@ graph TD
     E3 --> F
     F --> G[Bokeh Plot: Price vs Time]
     G --> H[Export to HTML]
-
 ```
 
 ---
@@ -93,7 +92,7 @@ graph TD
 
 ---
 
-## 📄  Report
+## 📄 Optional Report
 
 A full project report is included here:
 📄 [`Dynamic_Pricing_Report.pdf`]
@@ -107,5 +106,7 @@ A full project report is included here:
 * Easily expandable to real APIs for traffic, GPS, or competitor pricing
 
 ---
+
+
 
 > Built for **Summer Analytics 2025** by **Akash K**
