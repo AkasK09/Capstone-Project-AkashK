@@ -28,17 +28,17 @@ The output includes an interactive Bokeh visualization of price recommendations 
 
 ```mermaid
 graph TD
-    A[CSV: Occupancy, Capacity, Timestamp] --> B[Preprocessing: Merge & Sort]
-    B --> C[Pathway Input (Static Mode)]
-    C --> D[Windowing: Daily Tumbling]
-    D --> E1[Model 1: Linear]
-    D --> E2[Model 2: Demand-Based]
-    D --> E3[Model 3: Competitive]
-    E1 --> F[JSONL Output]
+    A[CSV Data: Occupancy, Capacity, Timestamps] --> B[Preprocessing]
+    B --> C[Pathway Static Mode]
+    C --> D[Daily Tumbling Window]
+    D --> E1[Model 1: Linear Pricing]
+    D --> E2[Model 2: Demand-Based Pricing]
+    D --> E3[Model 3: Competitive Pricing]
+    E1 --> F[Write JSONL]
     E2 --> F
     E3 --> F
-    F --> G[Bokeh Plot: Price vs Time]
-    G --> H[Export to HTML]
+    F --> G[Bokeh Plot Output]
+    G --> H[Export as HTML]
 ```
 
 ---
@@ -106,7 +106,5 @@ A full project report is included here:
 * Easily expandable to real APIs for traffic, GPS, or competitor pricing
 
 ---
-
-
 
 > Built for **Summer Analytics 2025** by **Akash K**
