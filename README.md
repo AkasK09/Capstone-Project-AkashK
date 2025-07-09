@@ -28,15 +28,18 @@ The output includes an interactive Bokeh visualization of price recommendations 
 
 ```mermaid
 graph TD
-    A[CSV Data: Occupancy, Capacity, Timestamps] --> B[Preprocessing: Merge & Sort]
-    B --> C[Pathway Streaming Input (Static)]
-    C --> D[Window Aggregation - Daily Tumbling Windows]
-    D --> E1[Model 1: Linear Pricing]
-    D --> E2[Model 2: Demand-Based Pricing]
-    D --> E3[Model 3: Competitive Pricing]
-    E1 & E2 & E3 --> F[Output: JSONL Storage]
+    A[CSV: Occupancy, Capacity, Timestamp] --> B[Preprocessing: Merge & Sort]
+    B --> C[Pathway Input (Static Mode)]
+    C --> D[Windowing: Daily Tumbling]
+    D --> E1[Model 1: Linear]
+    D --> E2[Model 2: Demand-Based]
+    D --> E3[Model 3: Competitive]
+    E1 --> F[JSONL Output]
+    E2 --> F
+    E3 --> F
     F --> G[Bokeh Plot: Price vs Time]
     G --> H[Export to HTML]
+
 ```
 
 ---
